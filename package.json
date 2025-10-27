@@ -1,0 +1,36 @@
+{
+  "name": "nodejs-template",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "engines": {
+    "npm": ">=10",
+    "node": ">=22"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "npx nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node build/index.js",
+    "create_database": "npx tsx --trace-warnings src/database/sqlite3/scripts/create_models.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunohadlich/nodejs-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunohadlich/nodejs-template/issues"
+  },
+  "homepage": "https://github.com/brunohadlich/nodejs-template#readme",
+  "devDependencies": {
+    "@types/node": "^24.5.1",
+    "nodemon": "^3.1.10",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+  }
+}
